@@ -29,9 +29,6 @@
 		27E7DA65196A461E006A2D29 /* profile4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7DA5E196A461E006A2D29 /* profile4@2x.png */; };
 		27E7DA66196A461E006A2D29 /* profile5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7DA5F196A461E006A2D29 /* profile5@2x.png */; };
 		27E7DA67196A461E006A2D29 /* profile6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7DA60196A461E006A2D29 /* profile6@2x.png */; };
-		27E7DA70196A47AC006A2D29 /* DKImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DA6B196A47AC006A2D29 /* DKImageBrowser.m */; };
-		27E7DA71196A47AC006A2D29 /* DKImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DA6D196A47AC006A2D29 /* DKImageCell.m */; };
-		27E7DA72196A47AC006A2D29 /* DKModalImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DA6F196A47AC006A2D29 /* DKModalImageBrowser.m */; };
 		27E7DA76196A5184006A2D29 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7DA75196A5184006A2D29 /* close@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -74,12 +71,6 @@
 		27E7DA5E196A461E006A2D29 /* profile4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile4@2x.png"; sourceTree = "<group>"; };
 		27E7DA5F196A461E006A2D29 /* profile5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile5@2x.png"; sourceTree = "<group>"; };
 		27E7DA60196A461E006A2D29 /* profile6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile6@2x.png"; sourceTree = "<group>"; };
-		27E7DA6A196A47AC006A2D29 /* DKImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKImageBrowser.h; sourceTree = "<group>"; };
-		27E7DA6B196A47AC006A2D29 /* DKImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKImageBrowser.m; sourceTree = "<group>"; };
-		27E7DA6C196A47AC006A2D29 /* DKImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKImageCell.h; sourceTree = "<group>"; };
-		27E7DA6D196A47AC006A2D29 /* DKImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKImageCell.m; sourceTree = "<group>"; };
-		27E7DA6E196A47AC006A2D29 /* DKModalImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKModalImageBrowser.h; sourceTree = "<group>"; };
-		27E7DA6F196A47AC006A2D29 /* DKModalImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKModalImageBrowser.m; sourceTree = "<group>"; };
 		27E7DA75196A5184006A2D29 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,14 +193,16 @@
 		27E7DA69196A478D006A2D29 /* 3rd party library */ = {
 			isa = PBXGroup;
 			children = (
-				27E7DA6A196A47AC006A2D29 /* DKImageBrowser.h */,
-				27E7DA6B196A47AC006A2D29 /* DKImageBrowser.m */,
-				27E7DA6C196A47AC006A2D29 /* DKImageCell.h */,
-				27E7DA6D196A47AC006A2D29 /* DKImageCell.m */,
-				27E7DA6E196A47AC006A2D29 /* DKModalImageBrowser.h */,
-				27E7DA6F196A47AC006A2D29 /* DKModalImageBrowser.m */,
+				27E7DA81196A6CD1006A2D29 /* DKImageBrowser */,
 			);
 			name = "3rd party library";
+			sourceTree = "<group>";
+		};
+		27E7DA81196A6CD1006A2D29 /* DKImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DKImageBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,11 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E7DA2C196A446A006A2D29 /* main.m in Sources */,
-				27E7DA70196A47AC006A2D29 /* DKImageBrowser.m in Sources */,
-				27E7DA72196A47AC006A2D29 /* DKModalImageBrowser.m in Sources */,
 				27E7DA30196A446A006A2D29 /* CBAppDelegate.m in Sources */,
 				27E7DA56196A4492006A2D29 /* CBProfilePhotoViewCell.m in Sources */,
-				27E7DA71196A47AC006A2D29 /* DKImageCell.m in Sources */,
 				27E7DA59196A44A6006A2D29 /* CBProfilePhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +519,7 @@
 				27E7DA50196A446B006A2D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E7DA51196A446B006A2D29 /* Build configuration list for PBXNativeTarget "CBProfilePhotoViewTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +528,7 @@
 				27E7DA53196A446B006A2D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,5 +15,8 @@ _____
 ###Demo
 ![](demo.gif)
 
+###Thanks to
+[DKImageBrowser](https://github.com/dkhamsing/DKImageBrowser) for the large photo browser view
+
 ### LICENSE
-Do whatever you want license
+MIT license
