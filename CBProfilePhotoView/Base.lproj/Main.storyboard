@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lzv-C8-I2Q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Profile Photo View Controller - Profile Photo-->
+        <scene sceneID="woL-aG-A31">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="ZAt-YH-lYk" customClass="CBProfilePhotoViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="VyF-L0-IxX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215692280000001" green="0.48627454040000001" blue="0.47843140360000003" alpha="1" colorSpace="deviceRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="xke-2j-K32">
+                            <size key="itemSize" width="70" height="70"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profilePhotoCell" id="Kpk-7x-giR" customClass="CBProfilePhotoViewCell">
+                                <rect key="frame" x="0.0" y="64" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9F9-zf-4xQ">
+                                            <rect key="frame" x="5" y="5" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="LRH-ap-ytU"/>
+                                                <constraint firstAttribute="height" constant="60" id="ap8-UA-URV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUu-8H-eYh">
+                                            <rect key="frame" x="50" y="0.0" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="close.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="9F9-zf-4xQ" firstAttribute="leading" secondItem="Kpk-7x-giR" secondAttribute="leading" constant="5" id="7DJ-p1-MAb"/>
+                                    <constraint firstItem="9F9-zf-4xQ" firstAttribute="top" secondItem="Kpk-7x-giR" secondAttribute="top" constant="5" id="Sa7-S4-4BR"/>
+                                    <constraint firstAttribute="bottom" secondItem="9F9-zf-4xQ" secondAttribute="bottom" constant="5" id="U1N-rC-cAA"/>
+                                    <constraint firstAttribute="trailing" secondItem="9F9-zf-4xQ" secondAttribute="trailing" constant="5" id="qQe-U7-amh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="closeButton" destination="IUu-8H-eYh" id="KXe-M0-KRP"/>
+                                    <outlet property="profilePhoto" destination="9F9-zf-4xQ" id="gVw-nl-fvZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ZAt-YH-lYk" id="hMe-1r-CI1"/>
+                            <outlet property="delegate" destination="ZAt-YH-lYk" id="pZL-vF-uee"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Profile Photo" id="Lfq-yg-Wxx">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="00G-HM-8zO">
+                            <connections>
+                                <action selector="editProfilePhoto:" destination="ZAt-YH-lYk" id="Zto-5Q-HaT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewN-Mk-WOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7B9-U8-erh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lzv-C8-I2Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yXB-ue-2uy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.22352941179999999" green="0.28627450980000002" blue="0.6705882353" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZAt-YH-lYk" kind="relationship" relationship="rootViewController" id="PV8-X2-Xrx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHd-t2-FZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close.png" width="256" height="256"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
